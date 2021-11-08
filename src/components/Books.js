@@ -1,30 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+// eslint-disable-next-line import/extensions
+import Button from './UI/Button';
+import Form from './UI/Form';
 
-const Books = () => (
-  <>
-    <div>
-      <span>
-        Action
-      </span>
-      <h2>
-        The Hunger Games
-      </h2>
-      <a href>
-        Suzanne Collins
-      </a>
-      <ul>
-        <li>Comments</li>
-        <li>Remove</li>
-        <li>Edit</li>
-      </ul>
-    </div>
-    <div>
-      <h2>Add New Book</h2>
-      <input placeholder="Book Title" />
-      <button type="submit">ADD BOOK</button>
-    </div>
+const Books = () => {
+  const [books] = useState([]);
 
-  </>
-);
+  return (
+    <div>
+      {books.map((book) => (
+        <div key={book.id}>{book}</div>
+      ))}
+      <Button content="Remove" />
+
+      <Form id="add-input" labelContent="ADD NEW BOOK" />
+    </div>
+  );
+};
 
 export default Books;
