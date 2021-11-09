@@ -9,7 +9,6 @@ a {
   text-decoration: none;
 }
 
-
 .mainlist {
   display: flex;
   list-style-type: none;
@@ -43,27 +42,26 @@ a {
   color: #0290ff;
 }
 
-
-.book-div{
-display: flex;
-align-content: center;
-justify-content: center;
-align-items: center;
-gap: 10%;
+.book-div {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
 }
 
-.remove{
-    width: 5.5rem;
-    height: 2.813rem;
-    margin: 1.188rem 0 0 2.125rem;
-    padding: 0.801rem 1.188rem 0.886rem 1.375rem;
-    border-radius: 3px;
-    background-color: #0290ff;
-    color: #fff;
-    border: none;
+.remove {
+  width: 5.5rem;
+  height: 2.813rem;
+  margin: 1.188rem 0 0 2.125rem;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  color: #fff;
+  border: none;
 }
 
-.booktitle{
+.booktitle {
   font-size: 20px;
   font-weight: 900;
 }
