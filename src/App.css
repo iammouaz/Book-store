@@ -65,3 +65,8 @@ a {
   font-size: 20px;
   font-weight: 900;
 }
+
+.title {
+  display: flex;
+  gap: 25px;
+}

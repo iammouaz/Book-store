@@ -11,7 +11,7 @@ const Books = () => {
       <Form id="add-input" labelContent="ADD NEW BOOK" />
 
       {books.map((book) => (
-        <Book key={book.id} book={book} />
+        <Book key={book.id} book={book} category={book.category} />
       ))}
     </div>
   );
