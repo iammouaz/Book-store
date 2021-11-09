@@ -1,25 +1,52 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Button from './Button';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { v4 as uuid } from 'uuid';
+import { addBook } from '../../redux/books/books';
+import classes from './Form.module.css';
 
-const Form = ({ id, labelContent }) => (
-  <form>
-    <label htmlFor={id}>
-      {labelContent}
-      <input type="text" id={id} />
-    </label>
-    <Button content="Add" />
-  </form>
-);
+const Form = () => {
+  const dispatch = useDispatch();
+  const [bookTitle, setBookTitle] = useState('');
+  const [bookCategory, setBookCategory] = useState('');
 
-Form.defaultProps = {
-  id: '',
-  labelContent: '',
-};
+  const bookTitleHandle = (e) => {
+    const title = e.target.value;
+    setBookTitle(title);
+  };
 
-Form.propTypes = {
-  id: PropTypes.string,
-  labelContent: PropTypes.string,
+  const bookCategoryHandle = (e) => {
+    const author = e.target.value;
+    setBookCategory(author);
+  };
+
+  const submitBookToStore = (e) => {
+    e.preventDefault();
+    const newBook = {
+      id: uuid(),
+      title: bookTitle,
+      category: bookCategory,
+    };
+    dispatch(addBook(newBook));
+
+    setBookTitle('');
+    setBookCategory('');
+  };
+
+  return (
+    <div className={classes.formSection}>
+      <div className={classes.line} />
+      <form onSubmit={submitBookToStore}>
+        <div className={classes.formContainer}>
+          <h2 className={classes.addNewBook}>ADD NEW BOOK</h2>
+          <div className={classes.inputsContainer}>
+            <input className={classes.inputTitle} type="text" id="title" value={bookTitle} onChange={bookTitleHandle} placeholder="Book Title" />
+            <input className={classes.inputCategory} type="text" id="category" value={bookCategory} onChange={bookCategoryHandle} placeholder="Book Category" />
+            <button className={classes.formButton} type="submit">ADD BOOK</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  );
 };
 
 export default Form;
