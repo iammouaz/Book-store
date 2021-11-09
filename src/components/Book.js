@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
 
 const Book = ({ book }) => {
-  const { id, title, author } = book;
+  const { id, title } = book;
   const dispatch = useDispatch();
 
   const handleRemoveBook = () => {
@@ -12,18 +12,13 @@ const Book = ({ book }) => {
   };
 
   return (
-    <div>
-      <div>
-        Title:
+    <div className="book-div">
+      <div className="title">
+        <span className="booktitle">Title : </span>
         {title}
       </div>
 
-      <div>
-        Author:
-        {author}
-      </div>
-
-      <button onClick={handleRemoveBook} type="button">Remove</button>
+      <button className="remove" onClick={handleRemoveBook} type="button">Remove</button>
     </div>
   );
 };

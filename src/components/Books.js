@@ -7,12 +7,12 @@ const Books = () => {
   const books = useSelector((state) => state.booksReducer);
 
   return (
-    <div>
+    <div className="Books">
+      <Form id="add-input" labelContent="ADD NEW BOOK" />
+
       {books.map((book) => (
         <Book key={book.id} book={book} />
       ))}
-
-      <Form id="add-input" labelContent="ADD NEW BOOK" />
     </div>
   );
 };
