@@ -1,19 +1,18 @@
-import React, { useState } from 'react';
-// eslint-disable-next-line import/extensions
-import Button from './UI/Button';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import Book from './Book';
 import Form from './UI/Form';
 
 const Books = () => {
-  const [books] = useState([]);
+  const books = useSelector((state) => state.booksReducer);
 
   return (
-    <div>
-      {books.map((book) => (
-        <div key={book.id}>{book}</div>
-      ))}
-      <Button content="Remove" />
-
+    <div className="Books">
       <Form id="add-input" labelContent="ADD NEW BOOK" />
+
+      {books.map((book) => (
+        <Book key={book.id} book={book} category={book.category} />
+      ))}
     </div>
   );
 };
