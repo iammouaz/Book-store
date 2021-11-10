@@ -3,14 +3,15 @@ import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import booksReducer from './books/books';
 
+const middlewares = [thunk, logger];
+
 const reducer = combineReducers({
   booksReducer,
 });
 
 const store = createStore(
   reducer,
-  applyMiddleware(thunk),
-  applyMiddleware(logger),
+  applyMiddleware(...middlewares),
 );
 
 export default store;
