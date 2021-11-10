@@ -1,10 +1,15 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getBooks } from '../redux/books/books';
 import Book from './Book';
 import Form from './UI/Form';
 
 const Books = () => {
+  const dispatch = useDispatch();
   const books = useSelector((state) => state.booksReducer);
+  useEffect(() => {
+    dispatch(getBooks());
+  }, []);
 
   return (
     <div className="Books">
