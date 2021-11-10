@@ -1,5 +1,7 @@
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
+const API_KEY = ' sW1YVSOfHmlQfwXHUQlx';
+const API = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${API_KEY}/books`;
 
 const initialState = [];
 
