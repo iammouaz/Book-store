@@ -24,9 +24,29 @@ const Book = ({ book }) => {
           <button className="li-buttons" type="button">Edit</button>
         </div>
       </div>
-      <button className="remove" type="button">Remove</button>
+      <div className="left">
+        <div className="left" />
+        <div className="wrapper" data-anim="base wrapper">
+          <div className="circle" data-anim="base left" />
+          <div className="circle" data-anim="base right" />
+        </div>
+        <div className="presentage">
+          <span className="pres">
+            100%
+          </span>
+          <span className="completed">
+            Completed
+          </span>
+        </div>
+        <div className="border">
+          <span className="completed">Current Chapter</span>
+          <span className="lesson">Chapter 17</span>
+          <button className="remove" type="button">Update progress</button>
 
+        </div>
+      </div>
     </div>
+
   );
 };
 

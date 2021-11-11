@@ -15,6 +15,7 @@ a {
   letter-spacing: 1.9px;
   color: #121212;
   font-weight: 500;
+  opacity: 0.5;
 }
 
 .fa-user {
@@ -22,7 +23,7 @@ a {
 }
 
 .userdiv {
-  margin-right: 4%;
+  margin-right: 18%;
 }
 
 .mainlist {
@@ -38,7 +39,7 @@ a {
 }
 
 .header {
-  height: 6vh;
+  height: 8vh;
 }
 
 .headholder {
@@ -74,8 +75,8 @@ a {
 }
 
 .remove {
-  width: 5.5rem;
-  height: 2.813rem;
+  width: 11.938rem;
+  height: 2.125rem;
   margin: 1.188rem 0 0 2.125rem;
   padding: 0.801rem 1.188rem 0.886rem 1.375rem;
   border-radius: 3px;
@@ -115,7 +116,7 @@ a {
 .li-buttons {
   background: none !important;
   border: none;
-  width: 4.563rem;
+  width: 5.563rem;
   height: 1.188rem;
   margin: 0.188rem 0.938rem 0.125rem 0;
   font-family: 'Roboto Slab', serif;
@@ -139,4 +140,110 @@ a {
   flex-direction: column;
   align-items: flex-start;
   gap: 27px;
+}
+
+.wrapper {
+  width: 100px;
+  height: 100px;
+  clip: rect(0, 100px, 100px, 50px);
+  position: relative;
+  left: -96%;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  border: 10px solid #4386bf;
+  border-radius: 50px;
+  position: absolute;
+  clip: rect(0, 50px, 100px, 0);
+}
+
+div[data-anim~=base] {
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+.wrapper[data-anim~=wrapper] {
+  animation-duration: 0.01s;
+  animation-delay: 1s;
+  animation-name: close-wrapper;
+  position: relative;
+  left: 0;
+}
+
+.circle[data-anim~=left] {
+  animation-duration: 3s;
+  animation-name: left-spin;
+}
+
+.circle[data-anim~=right] {
+  animation-duration: 1s;
+  animation-name: right-spin;
+}
+
+.pres {
+  width: 2.938rem;
+  height: 2.438rem;
+  margin: 0.063rem 7.063rem 0 0.688rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: #121212;
+}
+
+.completed {
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  color: #121212;
+}
+
+.presentage {
+  display: flex;
+  flex-direction: column;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.border {
+  border-left: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lesson {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+@keyframes right-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(180deg);
+  }
+}
+
+@keyframes left-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes close-wrapper {
+  to {
+    clip: rect(auto, auto, auto, auto);
+  }
 }

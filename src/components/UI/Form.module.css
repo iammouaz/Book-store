@@ -15,6 +15,7 @@
 
 .addNewBook {
   color: #888;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .inputsContainer {
@@ -75,4 +76,5 @@
   background-color: #0290ff;
   color: #fff;
   border: none;
+  font-family: 'Montserrat', sans-serif;
 }
