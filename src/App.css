@@ -10,18 +10,19 @@ a {
   width: 3.688rem;
   height: 1rem;
   margin: 1.125rem 2.563rem 0.688rem 0;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.813rem;
   letter-spacing: 1.9px;
   color: #121212;
   font-weight: 500;
 }
+
 .fa-user {
-  color: 0290ff;
+  color: #0290ff;
 }
 
-.userdiv{
- margin-right: 4%;
+.userdiv {
+  margin-right: 4%;
 }
 
 .mainlist {
@@ -33,7 +34,7 @@ a {
 
 .Books {
   background-color: whitesmoke;
-  min-height: 100vh;
+  padding-top: 1%;
 }
 
 .header {
@@ -48,18 +49,14 @@ a {
   align-items: center;
 }
 
-.main { 
+.main {
   color: #0290ff;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.875rem;
   font-weight: bold;
   width: 18rem;
   height: 2.313rem;
   margin: 0.375rem 2.938rem 0.125rem 0;
-
-}
-
-.list-item {
 }
 
 .book-div {
@@ -90,19 +87,18 @@ a {
 .booktitle {
   display: flex;
   gap: 25px;
-  font-family: RobotoSlab;
+  font-family: 'Roboto Slab', serif;
   font-size: 1.375rem;
   font-weight: bold;
   letter-spacing: -0.2px;
   color: #121212;
-
 }
 
 .author {
   width: 6.688rem;
   height: 1.188rem;
   margin: 0.25rem 0 0;
-  font-family: RobotoSlab;
+  font-family: 'Roboto Slab', serif;
   font-size: 0.875rem;
   font-weight: 300;
   font-stretch: normal;
@@ -112,17 +108,17 @@ a {
   color: #4386bf;
 }
 
-.buttons{
+.buttons {
   display: flex;
 }
 
-.li-buttons{
-  background: none!important;
+.li-buttons {
+  background: none !important;
   border: none;
   width: 4.563rem;
   height: 1.188rem;
   margin: 0.188rem 0.938rem 0.125rem 0;
-  font-family: RobotoSlab;
+  font-family: 'Roboto Slab', serif;
   font-size: 0.875rem;
   font-weight: 300;
   font-stretch: normal;
@@ -130,6 +126,7 @@ a {
   line-height: normal;
   letter-spacing: normal;
   color: #4386bf;
+  border-right: 1px solid;
 }
 
 .li-buttons:hover {
@@ -137,8 +134,9 @@ a {
   cursor: pointer;
 }
 
-.right{
+.right {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 27px;
 }

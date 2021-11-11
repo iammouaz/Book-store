@@ -13,11 +13,13 @@ const Books = () => {
 
   return (
     <div className="Books">
-      <Form id="add-input" labelContent="ADD NEW BOOK" />
 
       {books.map((book) => (
         <Book key={book.id} book={book} category={book.category} />
       ))}
+
+      <Form id="add-input" labelContent="ADD NEW BOOK" />
+
     </div>
   );
 };
