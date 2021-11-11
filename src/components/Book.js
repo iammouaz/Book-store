@@ -13,14 +13,19 @@ const Book = ({ book }) => {
 
   return (
     <div className="book-div">
-      <div className="title">
-        <span className="booktitle">Title : </span>
-        {title}
-        <span className="booktitle">Author : </span>
-        {category}
+      <div className="right">
+        <div className="title">
+          <span className="booktitle">{title}</span>
+          <span className="author">{category}</span>
+        </div>
+        <div className="buttons">
+          <button className="li-buttons" type="button">Comments</button>
+          <button className="li-buttons" onClick={handleRemoveBook} type="button">Remove</button>
+          <button className="li-buttons" type="button">Edit</button>
+        </div>
       </div>
+      <button className="remove" type="button">Remove</button>
 
-      <button className="remove" onClick={handleRemoveBook} type="button">Remove</button>
     </div>
   );
 };
