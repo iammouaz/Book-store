@@ -18,6 +18,10 @@ a {
   opacity: 0.5;
 }
 
+.flex {
+  display: flex;
+}
+
 .fa-user {
   color: #0290ff;
 }
@@ -27,7 +31,6 @@ a {
 }
 
 .mainlist {
-  display: flex;
   list-style-type: none;
   gap: 4%;
   align-items: center;
@@ -45,7 +48,6 @@ a {
 .headholder {
   margin-top: 2%;
   margin-left: 9%;
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -61,7 +63,6 @@ a {
 }
 
 .book-div {
-  display: flex;
   align-content: center;
   justify-content: space-between;
   align-items: center;
@@ -86,7 +87,6 @@ a {
 }
 
 .booktitle {
-  display: flex;
   gap: 25px;
   font-family: 'Roboto Slab', serif;
   font-size: 1.375rem;
@@ -107,10 +107,6 @@ a {
   line-height: normal;
   letter-spacing: normal;
   color: #4386bf;
-}
-
-.buttons {
-  display: flex;
 }
 
 .li-buttons {
@@ -136,7 +132,6 @@ a {
 }
 
 .right {
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 27px;
@@ -200,18 +195,15 @@ div[data-anim~=base] {
 }
 
 .presentage {
-  display: flex;
   flex-direction: column;
 }
 
 .left {
-  display: flex;
   justify-content: flex-end;
 }
 
 .border {
   border-left: 1px solid gray;
-  display: flex;
   flex-direction: column;
   align-items: center;
 }
