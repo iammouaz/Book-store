@@ -12,16 +12,41 @@ const Book = ({ book }) => {
   };
 
   return (
-    <div className="book-div">
-      <div className="title">
-        <span className="booktitle">Title : </span>
-        {title}
-        <span className="booktitle">Author : </span>
-        {category}
+    <div className="book-div flex">
+      <div className="right flex">
+        <div className="title">
+          <span className="booktitle flex">{title}</span>
+          <span className="author">{category}</span>
+        </div>
+        <div className="flex">
+          <button className="li-buttons" type="button">Comments</button>
+          <button className="li-buttons" onClick={handleRemoveBook} type="button">Remove</button>
+          <button className="li-buttons" type="button">Edit</button>
+        </div>
       </div>
+      <div className="left flex">
+        <div className="left flex" />
+        <div className="wrapper" data-anim="base wrapper">
+          <div className="circle" data-anim="base left" />
+          <div className="circle" data-anim="base right" />
+        </div>
+        <div className="presentage flex">
+          <span className="pres">
+            100%
+          </span>
+          <span className="completed">
+            Completed
+          </span>
+        </div>
+        <div className="border flex">
+          <span className="completed">Current Chapter</span>
+          <span className="lesson">Chapter 17</span>
+          <button className="remove" type="button">Update progress</button>
 
-      <button className="remove" onClick={handleRemoveBook} type="button">Remove</button>
+        </div>
+      </div>
     </div>
+
   );
 };
 
